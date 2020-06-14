@@ -4,7 +4,6 @@ import Logo from "./logo";
 import Playground from "./playground";
 import Why from "./why";
 import styled from "styled-components/macro";
-import { Link } from "gatsby";
 
 const Title = styled.div`
   background: black;
@@ -79,7 +78,7 @@ export default function Home() {
                 </a>
               </li>
               <li>
-                <Link to="/docs">Docs</Link>
+                <a href="/docs">Docs</a>
               </li>
             </ul>
           </nav>
