@@ -30,7 +30,7 @@ Forget about other things and focus on what matters: **writing .**
 
 `;
 
-export default function NotFound() {
+export default function DocsHome() {
   return (
     <Layout>
       <SEO />

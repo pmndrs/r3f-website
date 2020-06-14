@@ -2,19 +2,6 @@
   box-sizing: border-box;
 }
 
-input[type="color"] {
-  -webkit-appearance: none;
-  border: none;
-  width: 32px;
-  height: 32px;
-}
-input[type="color"]::-webkit-color-swatch-wrapper {
-  padding: 0;
-}
-input[type="color"]::-webkit-color-swatch {
-  border: none;
-}
-
 html,
 body,
 #___gatsby {
@@ -27,6 +14,23 @@ body,
 
 #___gatsby {
   overflow: auto;
+}
+
+select {
+  -webkit-appearance: none;
+  padding: 4px;
+  background: transparent;
+  border: 1px solid #ffffff;
+  color: white;
+  border-radius: 0;
+}
+
+input {
+  background: transparent;
+  border: 1px solid #ffffff;
+  width: 50px;
+  color: white;
+  padding: 4px;
 }
 
 canvas {

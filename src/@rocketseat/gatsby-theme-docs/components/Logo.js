@@ -7,10 +7,6 @@ export default () => (
     css={`
       width: 90px;
       height: 40px;
-
-      path {
-        fill: #333;
-      }
     `}
   />
 );

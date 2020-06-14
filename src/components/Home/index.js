@@ -2,7 +2,9 @@ import React from "react";
 import Hero from "./Hero";
 import Logo from "./logo";
 import Playground from "./playground";
+import Why from "./why";
 import styled from "styled-components/macro";
+import { Link } from "gatsby";
 
 const Title = styled.div`
   background: black;
@@ -34,7 +36,14 @@ const Title = styled.div`
 export default function Home() {
   return (
     <>
-      <div style={{ position: "relative", height: "100vh", padding: 20 }}>
+      <div
+        style={{
+          position: "relative",
+          height: "100vh",
+          padding: 20,
+          background: "white",
+        }}
+      >
         <header
           css={`
             position: absolute;
@@ -70,7 +79,7 @@ export default function Home() {
                 </a>
               </li>
               <li>
-                <a href="/docs">Docs</a>
+                <Link to="/docs">Docs</Link>
               </li>
             </ul>
           </nav>
@@ -93,6 +102,7 @@ export default function Home() {
             margin: auto;
           `}
         >
+          <Why />
           <Playground />
         </main>
       </div>
