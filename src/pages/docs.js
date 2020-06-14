@@ -27,7 +27,6 @@ Forget about other things and focus on what matters: **writing .**
 <br />
 
 [Get started now!](/getting-started)
-
 `;
 
 export default function DocsHome() {
