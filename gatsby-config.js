@@ -13,6 +13,7 @@ module.exports = {
     footer: ``,
   },
   plugins: [
+    `gatsby-plugin-styled-components`,
     {
       resolve: `@rocketseat/gatsby-theme-docs`,
       options: {
