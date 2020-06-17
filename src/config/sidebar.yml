@@ -1,14 +1,14 @@
 # Sidebar navigation
 
-- label: 'Introduction'
-  link: '/'
-- label: 'Getting started'
-  link: '/getting-started'
-- label: Usage
+- label: "Introduction"
+  link: "/"
+- label: "Getting started"
+  link: "/getting-started"
+- label: First Scene
   items:
-    - label: 'Creating docs'
-      link: '/usage/creating-docs'
-    - label: 'Navigation'
-      link: '/usage/navigation'
-    - label: 'Shadowing'
-      link: '/usage/shadowing'
+    - label: "First Things on the Screen"
+      link: "/first-scene/first-render"
+    - label: "Lights"
+      link: "/first-scene/lights"
+    - label: "Animation"
+      link: "/first-scene/animation"

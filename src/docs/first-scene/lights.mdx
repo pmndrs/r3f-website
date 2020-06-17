@@ -1,0 +1,62 @@
+---
+title: Adding Lights
+---
+
+A 3D scene will be black unless there is light and in the threejs world there are many types of lights. The most common ones are:
+
+- AmbientLight - This is a light that is just everywhere, doesn't shine anywhere in particular but just takes all over your scene.
+
+- Point Light - This is as the name says a light that focuses on point, you can think of it like a lamp.
+
+Let's start by adding an `ambientLight` in our scene:
+
+```jsx
+function Scene() {
+  return (
+    <>
+      <ambientLight />
+      <mesh rotation={[0, 10, 0]}>
+        <boxGeometry attach="geometry" args={[1, 1, 1]} />
+        <meshStandardMaterial attach="material" color={"#6be092"} />
+      </mesh>
+    </>
+  );
+}
+```
+
+Our cube is now green as you can see but since we added an ambient light all the sides are lighted up the same way and it looks too consistent and not relaistic at all.
+
+Let's also add a point light to make it better:
+
+```jsx
+function Scene() {
+  return (
+    <>
+      <ambientLight />
+      <pointLight position={[10, 10, 10]} />
+      <mesh rotation={[0, 10, 0]}>
+        <boxGeometry attach="geometry" args={[1, 1, 1]} />
+        <meshStandardMaterial attach="material" color={"#6be092"} />
+      </mesh>
+    </>
+  );
+}
+```
+
+We can see that now one side is way more bright than the other because the light hits the cube from the right side since it's positioned `10` on the X axis and our cube by default will be placed at position `0` on all three axis.
+
+We can see it even better if we remove the `ambientLight` and turn up the intensity and move our light to `0` on the X axis like so:
+
+```jsx
+<pointLight position={[0, 20, 10]} intensity={1.5} />
+```
+
+<iframe
+  src="https://codesandbox.io/embed/reverent-dust-dkex0?fontsize=14&hidenavigation=1&theme=dark"
+  style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+  title="reverent-dust-dkex0"
+  allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+  sandbox="allow-autoplay allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+></iframe>
+
+Let's now go over the last step of our first scene and animate the cube.
