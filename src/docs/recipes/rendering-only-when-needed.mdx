@@ -1,0 +1,16 @@
+---
+title: Rendering only when needed
+---
+
+By default it renders like a game loop 60fps. Switch on `invalidateFrameloop` to activate loop invalidation. Now it will render on demand when it detects prop changes.
+
+```jsx
+<Canvas invalidateFrameloop ... />
+```
+
+Sometimes you want to render single frames manually, for instance when you're dealing with async stuff or camera controls:
+
+```jsx
+const { invalidate } = useThree();
+const texture = useMemo(() => loader.load(url, invalidate), [url]);
+```

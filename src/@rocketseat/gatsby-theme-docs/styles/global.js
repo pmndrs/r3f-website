@@ -97,7 +97,7 @@ export default function GlobalStyle() {
 
           p {
             padding: 1rem;
-            background: #f5f5fa;
+            background: #232323;
             border-radius: 5px;
           }
         }

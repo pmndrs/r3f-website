@@ -1,0 +1,21 @@
+---
+title: Using Shader Materials
+---
+
+```jsx
+function CrossFade({ url1, url2, disp }) {
+  const [texture1, texture2, dispTexture] = useLoader(THREE.TextureLoader, [url1, url2, disp])
+
+  return (
+    <mesh>
+      <planeBufferGeometry attach="geometry" args={[1, 1]} />
+      <shaderMaterial
+        attach="material"
+        args={[CrossFadeShader]}
+        uniforms-texture-value={texture1}
+        uniforms-texture2-value={texture2}
+        uniforms-disp-value={dispTexture}
+        uniforms-dispFactor-value={0.5} />
+    </mesh>
+  )
+```

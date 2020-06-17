@@ -1,0 +1,34 @@
+---
+title: Managing imperative code
+---
+
+Stick imperative stuff into useMemo and write out everything else declaratively. This is how you can quickly form reactive, re-usable components that can be bound to a store, graphql, etc.
+
+```jsx
+function Extrusion({ start = [0, 0], paths, ...props }) {
+  const shape = useMemo(() => {
+    const shape = new THREE.Shape();
+    shape.moveTo(...start);
+    paths.forEach((path) => shape.bezierCurveTo(...path));
+    return shape;
+  }, [start, paths]);
+
+  return (
+    <mesh>
+      <extrudeGeometry attach="geometry" args={[shape, props]} />
+      <meshPhongMaterial attach="material" />
+    </mesh>
+  );
+}
+
+<Extrusion
+  start={[25, 25]}
+  paths={[
+    [25, 25, 20, 0, 0, 0],
+    [30, 0, 30, 35, 30, 35],
+    [30, 55, 10, 77, 25, 95],
+  ]}
+  bevelEnabled
+  amount={8}
+/>;
+```
