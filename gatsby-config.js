@@ -20,7 +20,7 @@ module.exports = {
         basePath: "/docs",
         configPath: `src/config`,
         docsPath: `src/docs`,
-        githubUrl: `https://github.com/react-spring/react-three-fiber`,
+        githubUrl: `https://github.com/react-spring/r3f-website`,
       },
     },
     {

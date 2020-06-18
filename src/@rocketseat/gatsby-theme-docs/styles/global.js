@@ -10,6 +10,7 @@ export default function GlobalStyle() {
     <Global
       styles={css`
         @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+        @import url("https://fonts.googleapis.com/css?family=Inter&display=swap");
 
         *,
         *::after,
@@ -25,7 +26,7 @@ export default function GlobalStyle() {
 
         body {
           font-size: 16px;
-          font-family: "Roboto", sans-serif;
+          font-family: "Inter", sans-serif;
           background-color: #0e0e0e;
           text-rendering: optimizelegibility;
         }
@@ -82,13 +83,13 @@ export default function GlobalStyle() {
         }
 
         a {
-          color: #d6d6d6 !important;
+          color: #d6d6d6;
           font-weight: bold;
 
           &:hover {
-            color: #5991c1 !important;
+            color: #5991c1;
             transition: all 100ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
-            opacity: 1 !important;
+            opacity: 1;
           }
         }
 

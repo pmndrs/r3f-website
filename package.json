@@ -1,11 +1,9 @@
 {
-  "name": "gatsby-starter-rocket-docs",
+  "name": "react-three-fiber-homepage",
   "private": true,
   "version": "1.0.0",
-  "description": "Out of the box Gatsby Starter for creating documentation websites easily and quickly. With support for MDX, code highlight, Analytics, SEO and more",
-  "author": "João Pedro Schmitz <oi@joaopedro.cc> (@joaopedro_cc)",
+  "description": "Homepage and docs for react three fiber",
   "license": "MIT",
-  "starter-name": "gatsby-starter-rocket-docs",
   "dependencies": {
     "@rocketseat/gatsby-theme-docs": "^2.1.1",
     "gatsby": "^2.19.10",
@@ -28,11 +26,6 @@
   "devDependencies": {
     "gatsby-plugin-mdx": "^1.2.15"
   },
-  "keywords": [
-    "gatsby",
-    "rocketseat",
-    "gatsby-starter"
-  ],
   "scripts": {
     "build": "gatsby build",
     "start": "gatsby develop",

@@ -93,6 +93,7 @@ const Playground = () => {
           `}
         >
           <button
+            aria-label="Show color picker"
             onClick={() => showPicker((s) => !s)}
             css={`
               width: 23px;
@@ -119,6 +120,7 @@ const Playground = () => {
       </p>
       I want to show{" "}
       <input
+        aria-label="How many geometry to show"
         type="number"
         max="6"
         min="1"

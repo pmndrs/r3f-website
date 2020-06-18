@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "gatsby";
 
 import Layout from "@rocketseat/gatsby-theme-docs/src/components/Layout";
 import SEO from "@rocketseat/gatsby-theme-docs/src/components/SEO";
