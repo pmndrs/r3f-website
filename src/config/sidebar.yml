@@ -22,8 +22,18 @@
       link: "/api/events"
     - label: "Hooks"
       items:
+        - label: "Introduction"
+          link: "/api/hooks/introduction"
         - label: "useThree"
           link: "/api/hooks/useThree"
+        - label: "useFrame"
+          link: "/api/hooks/useFrame"
+        - label: "useResource"
+          link: "/api/hooks/useResource"
+        - label: "useUpdate"
+          link: "/api/hooks/useUpdate"
+        - label: "useLoader"
+          link: "/api/hooks/useLoader"
     - label: "Additional exports"
       link: "/api/additional"
 
