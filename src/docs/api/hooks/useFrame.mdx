@@ -1,0 +1,25 @@
+---
+title: useFrame
+---
+
+```jsx
+useFrame((callback: (state, delta) => void), (renderPriority: number = 0));
+```
+
+This hook calls you back every frame, which is good for running effects, updating controls, etc. You receive the state (same as useThree) and a clock delta. If you supply a render priority greater than zero it will switch off automatic rendering entirely, you can then control rendering yourself. If you have multiple frames with a render priority then they are ordered highest priority last, similar to the web's z-index. Frames are managed, three-fiber will remove them automatically when the component that holds them is unmounted.
+
+Updating controls:
+
+```jsx
+import { useFrame } from "react-three-fiber";
+
+const controls = useRef();
+useFrame((state) => controls.current.update());
+return <orbitControls ref={controls} />;
+```
+
+Taking over the render-loop:
+
+```jsx
+useFrame(({ gl, scene, camera }) => gl.render(scene, camera), 1);
+```

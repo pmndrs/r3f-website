@@ -1,0 +1,22 @@
+---
+title: useUpdate
+---
+
+```jsx
+useUpdate(callback, dependencies, (optionalRef = undefined));
+```
+
+When objects need to be updated imperatively.
+
+```jsx
+import { useUpdate } from "react-three-fiber";
+
+const ref = useUpdate(
+  (geometry) => {
+    geometry.addAttribute("position", getVertices(x, y, z));
+    geometry.attributes.position.needsUpdate = true;
+  },
+  [x, y, z] // execute only if these properties change
+);
+return <bufferGeometry ref={ref} />;
+```

@@ -1,0 +1,57 @@
+---
+title: Events
+---
+
+Threejs objects that implement their own `raycast` method (meshes, lines, etc) can be interacted with by declaring events on them. We support pointer events, clicks and wheel-scroll. Events contain the browser event as well as the Threejs event data (object, point, distance, etc). You need to [polyfill](https://github.com/jquery/PEP) them yourself, if that's a concern.
+
+Additionally, there's a special `onUpdate` that is called every time the object gets fresh props, which is good for things like `self => (self.verticesNeedUpdate = true)`.
+
+Also notice the `onPointerMissed` on the canvas element, which fires on clicks that haven't hit any meshes.
+
+```jsx
+<mesh
+  onClick={(e) => console.log("click")}
+  onWheel={(e) => console.log("wheel spins")}
+  onPointerUp={(e) => console.log("up")}
+  onPointerDown={(e) => console.log("down")}
+  onPointerOver={(e) => console.log("over")}
+  onPointerOut={(e) => console.log("out")}
+  onPointerEnter={(e) => console.log("enter")}
+  onPointerLeave={(e) => console.log("leave")}
+  onPointerMove={(e) => console.log("move")}
+  onUpdate={(self) => console.log("props have been updated")}
+/>
+```
+
+#### Event data
+
+```jsx
+({
+  ...DomEvent                   // All the original event data
+  ...ThreeEvent                 // All of Three's intersection data
+  intersections: Intersect[]    // All intersections
+  object: Object3D              // The object that was actually hit
+  eventObject: Object3D         // The object that registered the event
+  unprojectedPoint: Vector3     // Camera-unprojected point
+  ray: Ray                      // The ray that was used to strike the object
+  camera: Camera                // The camera that was used in the raycaster
+  sourceEvent: DomEvent         // A reference to the host event
+  delta: number                 // Initial-click delta
+}) => ...
+```
+
+#### Propagation and capturing
+
+```jsx
+  onPointerDown={e => {
+    // Only the mesh closest to the camera will be processed
+    e.stopPropagation()
+    // You may optionally capture the target
+    e.target.setPointerCapture(e.pointerId)
+  }}
+  onPointerUp={e => {
+    e.stopPropagation()
+    // Optionally release capture
+    e.target.releasePointerCapture(e.pointerId)
+  }}
+```

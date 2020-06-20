@@ -24,6 +24,7 @@
     "three": "0.117.1"
   },
   "devDependencies": {
+    "@rocketseat/gatsby-theme-docs-core": "^1.1.0",
     "gatsby-plugin-mdx": "^1.2.15"
   },
   "scripts": {

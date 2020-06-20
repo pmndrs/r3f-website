@@ -10,6 +10,23 @@
       link: "/first-scene/lights"
     - label: "Animation"
       link: "/first-scene/animation"
+- label: API
+  items:
+    - label: "Canvas"
+      link: "/api/canvas"
+    - label: "Objects and properties"
+      link: "/api/objects-and-properties"
+    - label: "Automatic disposal"
+      link: "/api/automatic-disposal"
+    - label: "Events"
+      link: "/api/events"
+    - label: "Hooks"
+      items:
+        - label: "useThree"
+          link: "/api/hooks/useThree"
+    - label: "Additional exports"
+      link: "/api/additional"
+
 - label: Recipes
   items:
     - label: "Animating with react-spring"

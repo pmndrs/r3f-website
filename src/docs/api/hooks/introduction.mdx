@@ -1,0 +1,27 @@
+---
+title: Hooks
+---
+
+Hooks can only be used **inside** the Canvas element because they rely on context! You cannot expect something like this to work:
+
+```jsx
+function App() {
+  const { size } = useThree() // This will just crash
+  return (
+    <Canvas>
+      <mesh>
+```
+
+Do this instead:
+
+```jsx
+function SomeComponent() {
+  const { size } = useThree()
+  return <mesh />
+}
+
+function App() {
+  return (
+    <Canvas>
+      <SomeComponent />
+```

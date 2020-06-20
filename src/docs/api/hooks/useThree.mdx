@@ -1,0 +1,29 @@
+---
+title: useThree
+---
+
+```jsx
+useThree(): SharedCanvasContext
+```
+
+This hook gives you access to all the basic objects that are kept internally, like the default renderer, scene, camera. It also gives you the current size of the canvas in screen and viewport coordinates. The hook is reactive, if you resize the browser, for instance, and you get fresh measurements, same applies to any of the defaults you can change.
+
+```jsx
+import { useThree } from "react-three-fiber";
+
+const {
+  gl, // WebGL renderer
+  scene, // Default scene
+  camera, // Default camera
+  raycaster, // Default raycaster
+  size, // Bounds of the view (which stretches 100% and auto-adjusts)
+  viewport, // Bounds of the viewport in 3d units + factor (size/viewport)
+  aspect, // Aspect ratio (size.width / size.height)
+  mouse, // Current, centered, normalized 2D mouse coordinates
+  raycaster, // Intternal raycaster instance
+  clock, // THREE.Clock (useful for useFrame deltas)
+  invalidate, // Invalidates a single frame (for <Canvas invalidateFrameloop />)
+  intersect, // Calls onMouseMove handlers for objects underneath the cursor
+  setDefaultCamera, // Sets the default camera
+} = useThree();
+```
