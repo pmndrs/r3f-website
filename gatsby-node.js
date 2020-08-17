@@ -1,12 +1,5 @@
-const path = require(`path`);
-
-exports.createPages = ({ actions }) => {
-  const { createPage } = actions;
-  const home = path.resolve(`src/pages/docs.js`);
-
-  createPage({
-    // Path for this page — required
-    path: `/docs`,
-    component: home,
-  });
-};
+/**
+ * Implement Gatsby's Node APIs in this file.
+ *
+ * See: https://www.gatsbyjs.org/docs/node-apis/
+ */
