@@ -30,7 +30,7 @@ const Why = () => {
         <p>
           None. Everything that works in Threejs will work here. In contrast to
           "bindings" where a library ships/maintains dozens of wrapper
-          components, it just reconciles JSX to Threejs dynamically: <mesh />{" "}
+          components, it just reconciles JSX to Threejs dynamically: &lt;mesh /&gt;
           simply is another expression for new THREE.Mesh(). It does not know or
           target a specific Threejs version nor does it need updates for
           modified, added or removed upstream features.
