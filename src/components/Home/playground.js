@@ -45,8 +45,8 @@ render(
   <Canvas colorManagement>
     <pointLight position={[10, 10, 10]} />
     ${[...Array(parseInt(numberOfGeometry, 10)).keys()]
-      .map((_, i) => `<Mesh position={[${positions[i]}]} /> \n  `)
-      .join("  ")}
+    .map((_, i) => `<Mesh position={[${positions[i]}]} /> \n  `)
+    .join("  ")}
   </Canvas>
 )
 
@@ -79,6 +79,7 @@ const Playground = () => {
             margin: 0 5px;
           `}
           onChange={(e) => setActiveGeometry(e.target.value)}
+          onBlur={(e) => setActiveGeometry(e.target.value)}
         >
           <option value={box}>Box</option>
           <option value={sphere}>Sphere</option>
