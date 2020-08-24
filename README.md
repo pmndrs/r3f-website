@@ -1,7 +1,8 @@
 # React Three Fiber Website
 
-Demo: https://gracious-keller-98ef35.netlify.app/
+Demo: https://naughty-austin-1e55a4.netlify.app/
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e60823a1-0b2a-4cc4-8cdb-b8ef6f400ead/deploy-status)](https://app.netlify.com/sites/naughty-austin-1e55a4/deploys)
 
 ## How to run locally
 
