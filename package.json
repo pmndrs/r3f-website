@@ -23,7 +23,7 @@
     "react-scripts": "3.4.3",
     "react-three-fiber": "4.2.10",
     "styled-components": "5.1.1",
-    "three": "0.117.1"
+    "three": "0.125.0"
   },
   "scripts": {
     "build": "gatsby build",
